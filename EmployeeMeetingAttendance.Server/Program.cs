@@ -44,7 +44,7 @@ builder.Services.AddSwaggerGen(options =>
 
             Description =
                 "Enter your JWT token. Do not add 'Bearer' before the token."
-        } 
+        }
     );
 
 
@@ -276,8 +276,12 @@ builder.Services.AddCors(options =>
         {
             policy
                 .WithOrigins(
+                    // Local development
                     "https://localhost:62465",
-                    "http://localhost:62465"
+                    "http://localhost:62465",
+
+                    // Production Vercel frontend
+                    "https://employee-meeting-attendance-system-pink.vercel.app"
                 )
                 .AllowAnyHeader()
                 .AllowAnyMethod();
