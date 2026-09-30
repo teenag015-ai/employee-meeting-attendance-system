@@ -1,0 +1,22 @@
+:root {
+    /* Colors */
+    --primary-color: #1565C0;
+    --primary-hover: #0D47A1;
+    --secondary-color: #F4F8FC;
+    --accent-color: #F57C00;
+    --white: #FFFFFF;
+    --black: #212121;
+    --text-color: #444444;
+    --border-color: #D9D9D9;
+    --success: #28A745;
+    --danger: #DC3545;
+    /* Font */
+    --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    /* Radius */
+    --border-radius: 10px;
+    /* Shadow */
+    --box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+    /* Sizes */
+    --navbar-height: 60px;
+    --sidebar-width: 250px;
+}

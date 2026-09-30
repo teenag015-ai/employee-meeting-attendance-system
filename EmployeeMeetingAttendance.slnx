@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="employeemeetingattendance.client/employeemeetingattendance.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="EmployeeMeetingAttendance.Server/EmployeeMeetingAttendance.Server.csproj" />
+</Solution>

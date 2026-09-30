@@ -1,0 +1,50 @@
+# ================================
+# Visual Studio
+# ================================
+.vs/
+.vscode/
+*.user
+*.suo
+
+# ================================
+# .NET / ASP.NET Core
+# ================================
+**/bin/
+**/obj/
+
+# ================================
+# Node / React / Vite
+# ================================
+**/node_modules/
+**/dist/
+
+# ================================
+# Environment Variables
+# ================================
+.env
+.env.*
+!.env.example
+
+# ================================
+# ASP.NET Core Local Configuration
+# DO NOT upload database/JWT secrets
+# ================================
+EmployeeMeetingAttendance.Server/appsettings.json
+EmployeeMeetingAttendance.Server/appsettings.Development.json
+
+# ================================
+# Logs
+# ================================
+*.log
+
+# ================================
+# Operating System
+# ================================
+.DS_Store
+Thumbs.db
+
+# ================================
+# Temporary files
+# ================================
+*.tmp
+*.temp

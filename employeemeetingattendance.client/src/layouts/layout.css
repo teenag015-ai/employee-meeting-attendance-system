@@ -1,0 +1,333 @@
+/* ==========================================
+   MAIN LAYOUT
+========================================== */
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f7fc;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+}
+
+.page-content {
+    padding: 25px;
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: #1565C0;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 3px 0 12px rgba(0,0,0,.15);
+}
+
+/* Sidebar Logo */
+
+.sidebar-header {
+    height: 72px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.sidebar-logo {
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Menu */
+
+.sidebar-menu {
+    list-style: none;
+    padding: 18px 0;
+}
+
+    .sidebar-menu li {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 16px 25px;
+        cursor: pointer;
+        transition: .3s;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+        .sidebar-menu li:hover {
+            background: #0D47A1;
+        }
+
+        .sidebar-menu li.active {
+            background: #fff;
+            color: #1565C0;
+            border-left: 5px solid orange;
+            font-weight: 600;
+        }
+
+    .sidebar-menu svg {
+        font-size: 18px;
+    }
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+    height: 72px;
+    background: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.navbar-left {
+    display: none;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-icon {
+    font-size: 22px;
+    color: #666;
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-icon {
+    font-size: 40px;
+    color: #1565C0;
+}
+
+.user-info h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.user-info span {
+    color: #777;
+    font-size: 13px;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #F39C12;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+}
+
+    .logout-btn:hover {
+        background: #d68910;
+    }
+
+/* ==========================================
+   COMMON
+========================================== */
+
+.page-title {
+    color: #1565C0;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+}
+
+/* ==========================================
+   WELCOME CARD
+========================================== */
+
+.welcome-card {
+    background: linear-gradient(90deg,#1565C0,#1976D2);
+    color: white;
+    border-radius: 15px;
+    padding: 28px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(21,101,192,.25);
+}
+
+    .welcome-card h2 {
+        color: white;
+        margin-bottom: 10px;
+        font-size: 34px;
+    }
+
+    .welcome-card p {
+        font-size: 16px;
+        opacity: .95;
+    }
+
+/* ==========================================
+   DASHBOARD CARDS
+========================================== */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+    .dashboard-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,.15);
+    }
+
+.card-icon {
+    font-size: 42px;
+    color: #1565C0;
+    margin-bottom: 18px;
+}
+
+.dashboard-card h3 {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.dashboard-card h1 {
+    color: #1565C0;
+    font-size: 38px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:992px) {
+
+    .sidebar {
+        width: 80px;
+    }
+
+    .main-content {
+        margin-left: 80px;
+    }
+
+    .sidebar-logo {
+        display: none;
+    }
+
+    .sidebar-menu li {
+        justify-content: center;
+        padding: 18px 0;
+    }
+
+    .sidebar-menu span {
+        display: none;
+    }
+}
+
+@media(max-width:768px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .user-info div {
+        display: none;
+    }
+
+    .logout-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:576px) {
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .page-content {
+        padding: 15px;
+    }
+}
+/* ===========================
+   SIDEBAR LINKS
+=========================== */
+
+.sidebar-menu {
+    list-style: none;
+    padding: 18px 0;
+}
+
+    .sidebar-menu li {
+        list-style: none;
+    }
+
+    .sidebar-menu a {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 16px 25px;
+        color: white;
+        text-decoration: none;
+        transition: .3s;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+        .sidebar-menu a:hover {
+            background: #0D47A1;
+        }
+
+        .sidebar-menu a.active {
+            background: white;
+            color: #1565C0;
+            border-left: 5px solid #F39C12;
+            font-weight: 600;
+        }
+
+        .sidebar-menu a svg {
+            font-size: 18px;
+        }
